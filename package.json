@@ -1,20 +1,20 @@
 {
-  "name": "dopefolio",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "izzaldev-github-io",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "compile:scss": "node-sass sass/main.scss css/style.css -w",
-    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.css -o css/style.css",
-    "compress:css": "node-sass css/style.css css/style.css --output-style compressed",
-    "build": "npm-run-all prefix:css compress:css"
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview"
   },
-  "author": "",
-  "license": "GPL-3.0",
+  "dependencies": {
+    "vue": "^3.4.31"
+  },
   "devDependencies": {
-    "autoprefixer": "^10.3.1",
-    "node-sass": "^6.0.1",
-    "npm-run-all": "^4.1.5",
-    "postcss-cli": "^8.3.1"
+    "@vitejs/plugin-vue": "^5.0.5",
+    "typescript": "^5.2.2",
+    "vite": "^5.3.4",
+    "vue-tsc": "^2.0.24"
   }
 }
