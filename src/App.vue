@@ -12,6 +12,7 @@
     <div class="to-blue-500 p-3 m-3 bg-gradient-to-r from-cyan-500 text-white rounded-lg">
       Kotak 3
     </div>
+    <div class="w-1/2">Kotak 4</div>
   </section>
 </template>
 <style type="text/tailwind"></style>
