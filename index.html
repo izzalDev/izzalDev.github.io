@@ -1,13 +1,63 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="/src/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + Vue + TS</title>
+    <title>Iris Classification</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app" class="h-dvh w-dvw flex justify-center items-center bg-cover bg-center" style="background-image: url(./background.jpg);">
+      <form id="form">
+      <div class="rounded-3xl p-10 backdrop-blur-lg shadow-2xl w-[400px] brightness-105">
+          <div class="mb-5">
+            <label for="sepal-length" class="text-white block mb-2 font-medium">Sepal Lenght (cm)</label>
+            <input
+              type="number"
+              id="sepal-length"
+              placeholder="Sepal Lenght"
+              class="shadow-sm opacity-30 border border-gray-300 rounded-lg p-2 block w-full font-bold [&::-webkit-inner-spin-button]:appearance-none"
+              required
+            />
+          </div>
+          <div class="mb-5">
+            <label for="sepal-width" class="text-white block mb-2 font-medium">Sepal Width (cm)</label>
+            <input
+              type="number"
+              id="sepal-width"
+              placeholder="Sepal Width"
+              class="shadow-sm opacity-30 border border-gray-300 rounded-lg p-2 block w-full font-bold [&::-webkit-inner-spin-button]:appearance-none"
+              required
+            />
+          </div>
+          <div class="mb-5">
+            <label for="petal-length" class="text-white block mb-2 font-medium">Petal Lenght (cm)</label>
+            <input
+              type="number"
+              id="petal-length"
+              placeholder="Petal Lenght"
+              class="shadow-sm opacity-30 border border-gray-300 rounded-lg p-2 block w-full font-bold [&::-webkit-inner-spin-button]:appearance-none"
+              required
+            />
+          </div>
+          <div class="mb-5">
+            <label for="petal-width" class="text-white block mb-2 font-medium">Petal Width (cm)</label>
+            <input
+              type="number"
+              id="petal-width"
+              placeholder="Petal Width"
+              class="shadow-sm opacity-30 border border-gray-300 rounded-lg p-2 block w-full font-bold [&::-webkit-inner-spin-button]:appearance-none"
+              required
+            />
+          </div>
+          <div class="flex flex-col items-center">
+            <input type="submit" id="btn-predict" class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-md" value="Predict">
+            <div class="mt-5 text-2xl text-white font-bold drop-shadow-xl" id="result"></div>
+          </div>
+        </form>
+      </div>
+    </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
