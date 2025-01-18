@@ -69,6 +69,10 @@ depend() {
 #   - Add configuration to .zprofile
 # -----------------------------------------------------------------------------
 install-homebrew() {
+    if command -v brew >/dev/null; then
+        return 0
+    fi
+
     # Homebrew official script URL
     local script="https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh"
 
@@ -99,7 +103,7 @@ install-homebrew() {
 install-mysql() {
     depend brew install-homebrew
     # Check if MySQL is already installed
-    if check_command "mysql"; then
+    if check-command "mysql"; then
         echo "MySQL is already installed."
     else
         echo "Installing MySQL..."
@@ -284,16 +288,26 @@ install-cocoapods
 install-simulator
 setup-folder
 
-echo "Developer environment setup completed."
+# echo "Developer environment setup completed."
 
 
-brew install chrome-cli
-brew instal --cask docker
-/usr/sbin/softwareupdate --install-rosetta --agree-to-license
-brew install --cask utm
+# brew install chrome-cli
+# brew instal --cask docker
+# /usr/sbin/softwareupdate --install-rosetta --agree-to-license
+# brew install --cask utm
 
-softwareupdate --install-rosetta --agree-to-license
-brew install --cask free-download-manager
+# softwareupdate --install-rosetta --agree-to-license
 
-# install idownloader
-mas install 1220730126
+# install raycast
+brew install --cask alt-tab
+brew install node
+
+brew install --cask visual-studio-code
+code --install-extension chrisdias.vscode-opennewinstance
+code --install-extension dart-code.flutter
+code --install-extension ivhernandez.vscode-plist
+code --install-extension Zwyx.autoclosetabs
+code --install-extension github.vscode-github-actions
+code --install-extension mishkinf.file-path-commenter
+
+brew install pre-commit
