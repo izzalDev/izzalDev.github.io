@@ -2,7 +2,7 @@
 trap 'exit' SIGINT
 
 if ! command -v brew &>/dev/null; then
-  NONINTERACTIVE=1 /bin/bash -c \
+  NONINTERACTIVE=1 sudo /bin/bash -c \
   "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
