@@ -2,8 +2,7 @@
 trap 'exit' SIGINT
 
 if ! command -v brew &>/dev/null; then
-  NONINTERACTIVE=1 sudo /bin/bash -c \
-  "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
 if ! grep -q "$(/opt/homebrew/bin/brew shellenv)" ~/.zprofile; then
