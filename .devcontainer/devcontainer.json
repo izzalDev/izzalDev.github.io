@@ -1,5 +1,5 @@
 {
 	"name": "Debian",
-	"image": "mcr.microsoft.com/devcontainers/base:${templateOption:imageVariant}",
+	"image": "debian:bookworm-slim",
   "postCreateCommand" : "./.devcontainer/setup.sh"
 }
