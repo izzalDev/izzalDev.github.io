@@ -1,5 +1,5 @@
 # Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
-# Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
 scoop install git
 scoop bucket add extras
 scoop bucket add nerd-fonts
