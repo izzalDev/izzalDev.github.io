@@ -11,6 +11,7 @@ scoop install JetBrainsMono-NF
 scoop install uutils-coreutils
 scoop install vcredist2022
 scoop install yazi
+scoop install openssh
 
 New-Item "$env:APPDATA\alacritty\alacritty.toml" -ItemType File -Force
 
