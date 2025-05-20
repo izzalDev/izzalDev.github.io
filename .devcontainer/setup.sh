@@ -2,6 +2,6 @@
 echo "Setting up environment..."
 
 apt-get update
-apt-get install -y curl git
+apt-get install -y curl git openssh
 
 echo "Environment setup complete"
